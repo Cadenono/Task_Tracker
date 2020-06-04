@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-export default function ToDoItem(props) {
+export default function SingleTask(props) {
     const [clicked, setClicked] = useState(false); 
     function handleClick() { 
         setClicked(x => !x);

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import ToDoItem from './ToDoItem';
+import SingleTask from './SingleTask';
 
 function App() {
   const [inputText, setInputText] = useState('');
   const [items, setItems] = useState([]);
+
+  let time = new Date().toLocaleString();
 
   function readText(e) {
     const typedVal = e.target.value;
@@ -11,12 +13,8 @@ function App() {
   }
 
   function addItem() {
-    setItems( prevItems => {
-
-      return [...prevItems, inputText];
-
-    
-  }); 
+    setItems( prevText => [...prevText, inputText])
+    ; 
   setInputText('');
 } 
 
@@ -26,6 +24,9 @@ function App() {
     <div className="container">
       <div className="heading">
         <h1>Task Tracker</h1>
+        <h4>Welcome. It is {time}.</h4>
+
+      
       </div>
       <div className="form">
         <input onChange={readText} type="text" value={inputText}/>
@@ -36,7 +37,7 @@ function App() {
       <div>
       <ul>
       {items.map( (item, index) => (
-        <ToDoItem
+        <SingleTask
           key={index}
           input={item}
         />
