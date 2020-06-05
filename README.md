@@ -1,3 +1,7 @@
+Preview of Task Tracker 
+
+![Annotation 2020-06-05 225145](https://user-images.githubusercontent.com/51950528/83891176-5c554a00-a77f-11ea-96ec-7c016df3aac6.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
